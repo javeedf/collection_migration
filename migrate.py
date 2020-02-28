@@ -41,6 +41,7 @@ import redbaron
 import backoff
 
 from gh import GitHubOrgClient
+from gitutils import find_all_the_authors
 from rsa_utils import RSAKey
 from template_utils import render_template_into
 
@@ -56,6 +57,9 @@ DEVEL_URL = 'https://github.com/ansible/ansible.git'
 DEVEL_BRANCH = 'devel'
 
 ALL_THE_FILES = set()
+
+ALL_THE_AUTHORS = defaultdict(set)
+
 
 #CLEANUP_FILES = set(['lib/ansible/config/module_defaults.yml'])
 CLEANUP_FILES = set()
@@ -2494,6 +2498,8 @@ def main():
 
     global ALL_THE_FILES
     ALL_THE_FILES = checkout_repo(DEVEL_URL, devel_path, refresh=args.refresh)
+    global ALL_THE_AUTHORS
+    ALL_THE_AUTHORS = find_all_the_authors(ALL_THE_FILES, devel_path)
 
     if args.skip_migration:
         logger.info('Skipping the migration...')
