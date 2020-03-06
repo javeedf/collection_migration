@@ -11,10 +11,6 @@ os10:
   - dellos10_*/*/*/*
   module_utils:
   - network/dellos10/*
-  - network/dellos10/*/*
-  - network/dellos10/*/*/*
-  - network/dellos10/*/*/*/*
-  - network/dellos10/*/*/*/*/*
   modules:
   - network/dellos10/*
   terminal:
@@ -32,10 +28,6 @@ os9:
   - dellos9_*/*/*/*
   module_utils:
   - network/dellos9/*
-  - network/dellos9/*/*
-  - network/dellos9/*/*/*
-  - network/dellos9/*/*/*/*
-  - network/dellos9/*/*/*/*/*
   modules:
   - network/dellos9/*
   terminal:
@@ -53,10 +45,6 @@ os6:
   - dellos6_*/*/*/*
   module_utils:
   - network/dellos6/*
-  - network/dellos6/*/*
-  - network/dellos6/*/*/*
-  - network/dellos6/*/*/*/*
-  - network/dellos6/*/*/*/*/*
   modules:
   - network/dellos6/*
   terminal:
@@ -74,10 +62,6 @@ sonic:
   - dellos10_*/*/*/*
   module_utils:
   - network/dellos10/*
-  - network/dellos10/*/*
-  - network/dellos10/*/*/*
-  - network/dellos10/*/*/*/*
-  - network/dellos10/*/*/*/*/*
   modules:
   - network/dellos10/*
   terminal:
